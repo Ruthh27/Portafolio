@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Portafolio | Ruth Hernández</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        :root {
+            --morado: #7A72BF;
+            --negro: #0b0b0d;
+            --blanco: #ffffff;
+            --gris: #cfcfcf;
+            --rosado: #ff9fc5;
+            --azul: #006f8f;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--negro);
+            color: var(--blanco);
+            font-family: Arial, Helvetica, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            min-height: 100vh;
+            background: radial-gradient(circle at center, #15151a 0%, #09090b 70%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            border-bottom: 2px solid var(--morado);
+        }
+
+        .nombre {
+            position: absolute;
+            top: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1rem;
+            letter-spacing: 3px;
+            font-weight: 600;
+            color: var(--blanco);
+            text-transform: uppercase;
+        }
+
+        .contenido-hero {
+            text-align: center;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .titulo-portafolio {
+            font-size: clamp(3rem, 12vw, 9rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -6px;
+            line-height: 0.9;
+            margin: 0;
+        }
+
+        .titulo-portafolio .morado {
+            color: var(--morado);
+        }
+
+        .titulo-portafolio .blanco {
+            color: var(--blanco);
+        }
+
+        .subtitulo {
+            margin-top: 80px;
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--blanco);
+        }
+
+        .botones {
+            margin-top: 35px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-custom {
+            border-radius: 40px;
+            padding: 12px 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s ease;
+        }
+
+        .btn-morado {
+            background: var(--morado);
+            color: var(--blanco);
+            border: 2px solid var(--morado);
+        }
+
+        .btn-morado:hover {
+            background: transparent;
+            color: var(--morado);
+            border: 2px solid var(--morado);
+        }
+
+        .btn-outline-light:hover {
+            color: var(--negro);
+        }
+
+        .iconos-programas {
+            position: absolute;
+            left: 8%;
+            top: 22%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .icono-app {
+            background: #2b2b31;
+            color: var(--blanco);
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .barra-colores {
+            position: absolute;
+            right: 35px;
+            top: 25px;
+            width: 28px;
+            height: 95px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .barra-colores span {
+            flex: 1;
+        }
+
+        .barra-colores span:nth-child(1) {
+            background: var(--morado);
+        }
+
+        .barra-colores span:nth-child(2) {
+            background: var(--azul);
+        }
+
+        .barra-colores span:nth-child(3) {
+            background: var(--negro);
+            border: 1px solid #222;
+        }
+
+        .barra-colores span:nth-child(4) {
+            background: var(--rosado);
+        }
+
+        .decoracion {
+            position: absolute;
+            width: 130px;
+            height: 70px;
+            border-top: 2px solid var(--azul);
+            border-radius: 50%;
+            opacity: 0.8;
+            top: 28%;
+            left: 28%;
+        }
+
+        .seccion-pdf {
+            background: var(--negro);
+            padding: 30px 20px;
+        }
+
+        .titulo-pdf {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--blanco);
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .pdf-container {
+            width: 100%;
+            height: 90vh;
+            border: 2px solid var(--morado);
+            border-radius: 18px;
+            overflow: hidden;
+            background: #111;
+            box-shadow: 0 0 35px rgba(122, 114, 191, 0.35);
+        }
+
+        .pdf-viewer {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .footer {
+            background: #050506;
+            color: var(--gris);
+            text-align: center;
+            padding: 18px;
+            font-size: 0.9rem;
+            border-top: 1px solid #222;
+        }
+
+        @media (max-width: 768px) {
+            .titulo-portafolio {
+                letter-spacing: -2px;
+            }
+
+            .subtitulo {
+                margin-top: 45px;
+                font-size: 0.9rem;
+            }
+
+            .iconos-programas,
+            .decoracion {
+                display: none;
+            }
+
+            .barra-colores {
+                right: 18px;
+                top: 18px;
+            }
+
+            .pdf-container {
+                height: 80vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+
+        <div class="nombre">
+            Ruth Hernández
+        </div>
+
+        <div class="barra-colores">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="iconos-programas">
+            <div class="icono-app">Ai</div>
+            <div class="icono-app">Ps</div>
+        </div>
+
+        <div class="decoracion"></div>
+
+        <div class="contenido-hero">
+            <h1 class="titulo-portafolio">
+                <span class="morado">Por</span><span class="blanco">ta</span><span class="morado">folio</span>
+            </h1>
+
+            <p class="subtitulo">
+                Graphic Designer
+            </p>
+
+            <div class="botones">
+                <a href="#portafolio" class="btn btn-custom btn-morado">
+                    <i class="fa-solid fa-eye"></i>
+                    Ver portafolio
+                </a>
+
+                <a href="PORTAFOLIO RUTH 2026.pdf" class="btn btn-custom btn-outline-light" download>
+                    <i class="fa-solid fa-download"></i>
+                    Descargar PDF
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="seccion-pdf" id="portafolio">
+        <h2 class="titulo-pdf">
+            Portafolio completo
+        </h2>
+
+        <div class="pdf-container">
+            <iframe class="pdf-viewer" src="PORTAFOLIO RUTH 2026.pdf" title="Portafolio Ruth Hernández">
+            </iframe>
+        </div>
+    </section>
+
+    <footer class="footer">
+        © 2026 | Portafolio digital de Ruth Noemí Hernández Rivas
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+[
+  {
+    "titulo": "Video 1",
+    "descripcion": "",
+    "video": "videos/animacion-1.mp4"
+  },
+  {
+    "titulo": "Video 2",
+    "descripcion": "",
+    "video": "videos/animacion-2.mp4"
+  },
+  {
+    "titulo": "Video 3",
+    "descripcion": "",
+    "video": "videos/animacion-3.mp4"
+  }
+]

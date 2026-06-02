@@ -13,5 +13,30 @@
     "titulo": "Video 3",
     "descripcion": "",
     "video": "videos/animacion-3.mp4"
+  },
+  {
+    "titulo": "Video 4",
+    "descripcion": "",
+    "video": "videos/animacion-4.mp4"
+  },
+  {
+    "titulo": "Video 5",
+    "descripcion": "",
+    "video": "videos/animacion-5.mp4"
+  },
+  {
+    "titulo": "Video 6",
+    "descripcion": "",
+    "video": "videos/animacion-6.mp4"
+  },
+  {
+    "titulo": "Video 7",
+    "descripcion": "",
+    "video": "videos/animacion-7.mp4"
+  },
+  {
+    "titulo": "Video 8",
+    "descripcion": "",
+    "video": "videos/animacion-8.mp4"
   }
 ]
